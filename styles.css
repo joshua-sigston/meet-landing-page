@@ -129,6 +129,11 @@ button {
     border-radius: 1.5rem;
     color: var(--clr-lotion);
     padding: .7em 0;
+    transition: var(--transition);
+}
+
+button {
+    cursor: pointer;
 }
 
 .center {
@@ -198,6 +203,15 @@ p {
     width: 193px;
     background-color: var(--clr-rackley);
 }
+
+.download:hover {
+    background-color: hsl(192, 42%, 59%);
+}
+
+.what_is_it:hover {
+    background-color: hsl(269, 50%, 68%);
+}
+
 
 .what_is_it {
     width: 139px;
@@ -310,6 +324,10 @@ footer p {
 
 footer .download {
     background-color: var(--clr-royal-prple);
+}
+
+footer .download:hover {
+    background-color: hsl(269, 50%, 68%);
 }
 
 footer span {
