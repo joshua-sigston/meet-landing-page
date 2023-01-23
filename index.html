@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <!-- font links -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- style links -->
+  <link rel="stylesheet" href="styles.css">
+  <title>Frontend Mentor | Meet landing page</title>
+</head>
+<body>
+
+  <header class="flex_row center">
+    <div class="logo_container">
+      <img src="images/logo.svg" alt="logo" class="logo">
+    </div>
+  </header>
+  
+  <main>
+    <section class="hero_section flex_row center">
+      <!-- mobile and tablet image -->
+      <img src="images/image-hero.png" alt="" class="hero_img">
+      <!-- desktop image -->
+      <img src="images/image-hero-left.png" alt="" class="hero_img_left inactive">
+      <div class="hero_section_content flex_column">
+        <div class="hero_literature flex_column container">
+          <h2>Group Chat for Everyone</h2>
+          <p>Meet makes it easy to connect with others face-to-face virtually and collaborate across any device.</p>
+        </div>
+        <div class="buttons container flex_row">
+          <button class="download">Download <span>v1.3</span></button>
+          <button class="what_is_it">What is it?</button>
+        </div>
+      </div>
+      <!-- desktop image -->
+      <img src="images/image-hero-right.png" alt="" class="hero_img_right inactive">
+    </section>
+  
+    <div class="zero_one_container flex_column">
+      <div class="line"></div>
+      <div class="zero_one flex_column">01</div>
+    </div>
+
+    <section class="meetings_section flex_column">
+      <div class="images_container flex_row">
+        <img src="images/image-woman-in-videocall.jpg" alt="">
+        <img src="images/image-women-videochatting.jpg" alt="">
+        <img src="images/image-men-in-meeting.jpg" alt="">
+        <img src="images/image-man-texting.jpg" alt="">
+      </div>
+      <div class="meetings_literature flex_column">
+        <p class="modern_use">Built for modern use</p>
+        <h2>Smarter meetings, all in one place</h2>
+        <p>Send messages, share files, show your screen, and record your meetings — all in one workspace. Control who can join with invite-only team access, data encryption, and data export.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="flex_row">
+    <div class="zero_two_container flex_column">
+      <div class="line"></div>
+      <div class="zero_two flex_column">02</div>
+    </div>
+    <h2>Experience more together</h2>
+    <p>Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.</p>
+    <button class="download">Download <span>v1.3</span></button>
+  </footer>
+</body>
+</html>

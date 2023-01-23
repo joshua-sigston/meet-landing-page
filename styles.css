@@ -1,0 +1,421 @@
+* reset and custom style classes */
+/*
+1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+/*
+2. Remove default margin
+*/
+* {
+    margin: 0;
+}
+/*
+3. Allow percentage-based heights in the application
+*/
+html, body {
+    min-height: 100%;
+    font-size: 16px;
+    font-family: var(--ff-base);
+}
+/*
+Typographic tweaks!
+4. Add accessible line-height
+5. Improve text rendering
+*/
+body {
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    font-family: var(--ff-base);
+}
+/*
+6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+/*
+7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+    font: inherit;
+}
+/*
+8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+/*
+9. Create a root stacking context
+*/
+#root, #__next {
+    isolation: isolate;
+}
+
+
+/* Root Styles */
+:root {
+    /* colors */
+    --clr-lotion: hsl(0, 0%, 98%);
+    --clr-royal-prple: hsl(268, 34%, 53%);
+    --clr-rackley: hsl(192, 37%, 48%);
+    --clr-yankee-blu: hsl(240, 21%, 20%);
+    --clr-roman-silver: hsl(240, 10%, 57%);
+    --clr-mauve: hsl(268, 100%, 86%);
+    --clr-pale-cyan: hsl(192, 90%, 72%);
+
+    /* font */
+    --ff-base: 'Red Hat Display', sans-serif;
+
+    --transition: 300ms ease-in-out;
+
+    --fw-reg: 400;
+    --fw-md: 500;
+    --fw-semi-bold: 600;
+    --fw-bold: 700;
+
+    --fnt-size-lrg: 4rem;
+    --fnt-size-md: 2.75rem;
+    --fnt-size-sm: 1.125rem;
+
+    --line-lrg: 64px;
+    --line-md: 44px;
+    --line-small: 26px;
+    
+    --ls: 4px;
+}
+
+/* general styles */
+
+.grid {
+    display: grid;
+}
+
+.flex_row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex_column {
+    display: flex;
+    flex-direction: column;
+}
+
+.center_by_grid {
+    display: grid;
+    place-content: center;
+}
+
+.inactive {
+    display: none;
+}
+
+.opacity {
+    opacity: 1;
+}
+
+img {
+    max-width: 100%;
+}
+
+button {
+    font-family: var(--ff-base);
+    font-size: 1rem;
+    font-weight: var(--fw-bold);
+    border: none;
+    border-radius: 1.5rem;
+    color: var(--clr-lotion);
+    padding: .7em 0;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    padding-inline: 1em;
+    overflow: hidden;
+}
+
+p {
+    color: var(--clr-roman-silver);
+}
+
+.logo_container {
+    padding-top: 3em;
+    padding-bottom: 2em;
+}
+
+/* hero section */
+.hero_section {
+    justify-content: center;
+    gap: 2em;
+}
+
+.hero_section_content {
+    gap: 1.5em;
+}
+
+.hero_img {
+    padding-top: 2em;
+    padding-bottom: 2em;
+    transform: scale(1.2);
+}
+
+.hero_literature {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    gap: 1.5em;
+    margin-top: 2em;
+}
+
+.hero_literature h2 {
+    font-size: 2.5rem;
+    font-weight: var(--fw-bold);
+    line-height: var(--line-md);
+}
+
+.hero_literature p {
+    font-weight: var(--fw-md);
+}
+
+.buttons.container {
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.buttons span {
+    color: var(--clr-pale-cyan);
+}
+
+.download {
+    width: 193px;
+    background-color: var(--clr-rackley);
+}
+
+.what_is_it {
+    width: 139px;
+    background-color: var(--clr-royal-prple);
+}
+
+/* 01 */
+.zero_one_container, .zero_two_container {
+    align-items: center;
+    padding-top: 4em;
+    padding-bottom: 4em;
+}
+
+.line {
+    height: 84px;
+    width: 1px;
+    background-color: var(--clr-roman-silver);
+}
+
+.zero_one, .zero_two {
+    border: 1px solid var(--clr-roman-silver);
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+
+    align-items: center;
+    justify-content: center;
+}
+
+/* meetings */
+
+.meetings_section, .meetings_literature {
+    align-items: center;
+    text-align: center;
+    gap: 1.5em;
+}
+
+.images_container {
+    gap: 1em;
+    justify-content: space-between;
+}
+.images_container img {
+    width: 151px;
+    height: 143px;
+    border-radius: .5rem;
+}
+
+.modern_use {
+    color: var(--clr-rackley);
+    font-weight: var(--fw-bold);
+    letter-spacing: var(--ls);
+    text-transform: uppercase;
+}
+
+.meetings_literature {
+    padding: 2em 1em;
+}
+
+.meetings_literature h2 {
+    font-size: 2rem;
+    line-height: 36px;
+}
+
+/* footer */
+footer {
+    margin-top: 10em;
+    text-align: center;
+    justify-content: center;
+    padding: 3em 1.5em;
+    gap: 1.5em;
+    position: relative;
+    background-color: rgba(21, 106, 129, .9);
+}
+
+footer:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background-image: url('images/image-footer.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.zero_two_container {
+    position: absolute;
+    padding: 0;
+    top: -7em;
+}
+
+.zero_two {
+    background-color: var(--clr-lotion);
+}
+
+footer h2 {
+    color: var(--clr-lotion);
+    font-size: var(--fnt-size-md);
+    line-height: 36px;
+}
+
+footer p {
+    font-size: 1.125rem;
+    color: var(--clr-lotion);
+    line-height: var(--line-small);
+}
+
+footer .download {
+    background-color: var(--clr-royal-prple);
+}
+
+footer span {
+    color: var(--clr-mauve);
+}
+
+@media screen and (min-width: 768px) {
+    .hero_img {
+        transform: scale(1.1);
+    }
+
+    .hero_literature {
+        width: 25rem;
+    }
+
+    .meetings_literature h2 {
+        width: 22rem;
+    }
+
+    .meetings_literature p{
+        padding-inline: 5em;
+    }
+
+    footer p {
+        padding-inline: 4em;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+   .hero_section_content {
+        min-width: 35rem;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    main {
+        padding: 0;
+    }
+
+    .hero_img {
+        display: none;
+    }
+
+    .hero_section {
+        gap: 3em;
+        position: relative;
+        padding-top: 2em;
+    }
+
+    .hero_section_content {
+        align-items: center;
+        gap: 2em;
+        min-width: 33rem;
+    }
+
+    .hero_literature {
+        gap: 2em;
+        min-width: 100%;
+    }
+
+    .hero_literature h2 {
+        font-size: var(--fnt-size-lrg);
+        line-height: var(--line-lrg);
+    }
+
+    .hero_literature p {
+        font-size: var(--fnt-size-sm);
+    }
+
+    .hero_img_left, .hero_img_right {
+        display: block;
+        position: absolute;
+    }
+
+    .hero_img_left {
+        left: 0;
+        top: .25em;
+        left: -2em;
+    }
+
+    .hero_img_right {
+        right: 0;
+        top: 5em;
+        right: -2em;
+    }
+
+    .meetings_literature p {
+        max-width: 30rem;
+    }
+
+    footer {
+        text-align: left;
+        padding: 9em 9em;
+        align-items: center;
+    }
+
+    footer h2 {
+        flex: 1;
+    }
+
+    footer p {
+        flex: 1;
+    }
+
+    footer::before {
+        background-image: url('images/image-footer-desktop.jpg');        transform: scale(1);
+    }
+}
